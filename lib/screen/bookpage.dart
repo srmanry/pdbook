@@ -7,34 +7,40 @@ class GridBookPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.green,
-          centerTitle: true,
-          title: const Text('Class Name'),
-        ),
-        body: GridView.builder(
-            itemCount: 10,
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              childAspectRatio: 1.5 / 1.7,
-              // mainAxisSpacing: 1,
+        body: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 10),
+              child: Text(' অন্যান্য বই সমূহ '),
             ),
-            itemBuilder: (_, index) {
-              return Padding(
-                padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
-                    color: Colors.amber,
+            Expanded(
+              child: GridView.builder(
+                  itemCount: 10,
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    childAspectRatio: 1.5 / 1.7,
+                    // mainAxisSpacing: 1,
                   ),
-                  child: Image.asset(
-                    "assets/images/1.png",
-                    fit: BoxFit.cover,
-                  ),
-                  //  height: 150,
-                ),
-              );
-            }),
+                  itemBuilder: (_, index) {
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 5, horizontal: 5),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          color: Colors.amber,
+                        ),
+                        child: Image.asset(
+                          "assets/images/1.png",
+                          fit: BoxFit.cover,
+                        ),
+                        //  height: 150,
+                      ),
+                    );
+                  }),
+            ),
+          ],
+        ),
       ),
     );
   }

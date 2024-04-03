@@ -32,9 +32,9 @@ class HomeScreen extends StatelessWidget {
             physics: NeverScrollableScrollPhysics(),
             //crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("গণিতের সূত্র সমূহ"),
-              Text("পদার্থ বিজ্ঞানের সূত্র"),
-              Row(
+              const Text("গণিতের সূত্র সমূহ"),
+              const Text("পদার্থ বিজ্ঞানের সূত্র"),
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text("সকরারি ছুটির তালিকা - ২০২৫"),
@@ -46,24 +46,24 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              Center(
+              const Center(
                 child: Text(
                   "বাংলা ভার্সন",
                   style: TextStyle(color: Colors.black),
                 ),
               ),
-              Container(
+              SizedBox(
                   height: 260,
                   child: ListView.builder(
-                      physics: NeverScrollableScrollPhysics(),
+                      physics: const NeverScrollableScrollPhysics(),
                       itemCount: ClassList.length,
                       itemBuilder: (_, index) {
                         return Padding(
-                          padding:
-                              EdgeInsets.symmetric(vertical: 0, horizontal: 0),
+                          padding: const EdgeInsets.symmetric(
+                              vertical: 0, horizontal: 0),
                           child: InkWell(
                             onTap: () {
                               Get.to(() => GridBookPage());
@@ -78,8 +78,8 @@ class HomeScreen extends StatelessWidget {
                           ),
                         );
                       })),
-              Center(
-                child: const Text(
+              const Center(
+                child: Text(
                   "ইংরেজী ভার্সন",
                   style: TextStyle(color: Colors.black),
                 ),
@@ -89,20 +89,20 @@ class HomeScreen extends StatelessWidget {
                   //flex: 2,
                   child: ListView.builder(
                       itemCount: ClassList.length,
-                      physics: NeverScrollableScrollPhysics(),
+                      physics: const NeverScrollableScrollPhysics(),
                       itemBuilder: (_, index) {
                         return Padding(
-                          padding:
-                              EdgeInsets.symmetric(vertical: 0, horizontal: 0),
+                          padding: const EdgeInsets.symmetric(
+                              vertical: 0, horizontal: 0),
                           child: InkWell(
                             onTap: () {
-                              Get.to(() => GridBookPage());
+                              Get.to(() => const GridBookPage());
                             },
                             child: Card(
                               color: Colors.amber,
                               child: ListTile(
                                 title: Text(ClassList[index]),
-                                trailing: Text("খুলুন"),
+                                trailing: const Text("খুলুন"),
                               ),
                             ),
                           ),

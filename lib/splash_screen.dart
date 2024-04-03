@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'first_screen.dart';
 import 'home_screen.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -9,12 +10,12 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Future.delayed(
-      Duration(seconds: 5),
+      const Duration(seconds: 5),
       () {
-        Get.to(() => HomeScreen());
+        Get.to(() => FristScreen());
       },
     );
-    return Scaffold(
+    return const Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
