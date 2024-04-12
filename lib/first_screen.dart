@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:ntrc_book/class/calss_six.dart';
 import 'package:ntrc_book/class/class_eight.dart';
 import 'package:ntrc_book/class/class_nine.dart';
 import 'package:ntrc_book/class/class_seven.dart';
 import 'package:ntrc_book/class/others.dart';
 
+import 'note/note_page.dart';
 import 'screen/bookpage.dart';
 
 class FristScreen extends StatelessWidget {
@@ -16,11 +18,15 @@ class FristScreen extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Color(0xfffFFEBD0),
         appBar: AppBar(
-          backgroundColor: Color(0xfffFFEBD0),
+          backgroundColor: const Color(0xfffFFEBD0),
           centerTitle: true,
           title: const Text("NTRC Books - 2025"),
           actions: [
-            IconButton(onPressed: () {}, icon: const Icon(Icons.note_add))
+            IconButton(
+                onPressed: () {
+                  Get.to(const NoteScreen());
+                },
+                icon: const Icon(Icons.note_add))
           ],
         ),
         body: Column(
@@ -147,10 +153,10 @@ class FristScreen extends StatelessWidget {
                     ))),
           ],
         ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          child: Icon(Icons.note_add),
-        ),
+        // floatingActionButton: FloatingActionButton(
+        //   onPressed: () {},
+        //   child: Icon(Icons.note_add),
+        // ),
       ),
     );
   }

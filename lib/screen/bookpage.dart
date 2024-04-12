@@ -9,8 +9,8 @@ class GridBookPage extends StatelessWidget {
       child: Scaffold(
         body: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10),
+            const Padding(
+              padding: EdgeInsets.symmetric(vertical: 10),
               child: Text(' অন্যান্য বই সমূহ '),
             ),
             Expanded(
