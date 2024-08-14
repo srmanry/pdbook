@@ -12,7 +12,9 @@ class ClsSixScreen extends StatelessWidget {
         child: Column(
           children: [
             const Center(
-              child: Text(" Class Six all books - 2025 "),
+              child:
+            //  Text(" Class Six all books - 2025 "),
+              Text("ষষ্ঠ শ্রেণীর সকল বই সমূহ"),
             ),
             Expanded(
                 child: ListView.builder(
@@ -47,7 +49,8 @@ class ClsSixScreen extends StatelessWidget {
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Text(
-                                  "Read",
+                                  'পডুন',
+                                 // "Read",
                                   style: TextStyle(
                                       color: Color.fromARGB(255, 13, 43, 15)),
                                 ),
